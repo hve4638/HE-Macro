@@ -1,6 +1,6 @@
 ﻿;	HE_Macro v2.0 (Last Changed: 2022/09/04)
 #NoEnv
-#Warn
+;#Warn
 #SingleInstance, Force
 SendMode Input
 SetWorkingDir %A_ScriptDir%
@@ -9,6 +9,7 @@ SetKeyDelay, -1
 ;shift +
 ;win #
 ;alt !
+
 
 ;+Del::Delete
 ;^Home::Home
@@ -33,6 +34,8 @@ infoIsVisibled := false
 ^.::send, {END}
 +^,::Send, {ShiftDown}{HOME}
 +^.::Send, {ShiftDown}{END}
+
+^#r::Reload  ; Ctrl+Alt+R
 
 *CapsLock::
 	magicFnMode := true
@@ -68,6 +71,8 @@ CapsLock Up::
 	*x::^x
 	*c::^c
 	*v::^v
+
+	*b::Mbutton
 
 	*i::up
 	*k::down
